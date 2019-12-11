@@ -1,2 +1,0 @@
-# Supernacular
-Supernacular Website
