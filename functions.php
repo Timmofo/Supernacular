@@ -1,6 +1,7 @@
 <?php
 
 function theme_files() {
+    wp_enqueue_script('google-font', '//fonts.googleapis.com/css?family=Crimson+Pro:600|Lato:400,700&display=swap');
     wp_enqueue_script('main_styles', get_stylesheet_uri());
 }
 
