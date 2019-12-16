@@ -8,3 +8,100 @@
     License URI: http://www.gnu.org/licenses/gpl-2.0.html
     Text Domain: supernacular
 */
+
+// COLOR PALETTE
+
+$color-primary: #122852;
+$color-secondary: #F14F31;
+
+$color-yellow: #FFB700;
+
+// BASIC RESET
+
+* {
+    margin: 0;
+    padding: 0;
+    
+    &,
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
+}
+
+html {
+    box-sizing: border-box;
+}
+
+// REUSABLE ELEMENTS
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+// header {
+//     height: 100vh;
+//     background-color: $color-primary;
+// }
+
+.container {
+    padding: 0 5rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Crimson Pro', serif;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+// BUTTON
+
+.btn {
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: .8rem 3rem;
+    border-radius: 5px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-full {
+    background-color: $color-yellow;
+    color: #fff;
+    border: none;
+}
+
+// NAVIGATION
+
+#nav {
+    padding: 3rem 0;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu-header {
+    display: flex;
+
+    & li:not(:first-child) {
+        margin-left: 3.5rem;
+    }
+
+    & a {
+        text-transform: uppercase;
+    }
+}

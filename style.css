@@ -2,9 +2,62 @@
     Theme Name: Supernacular
     Author: Supernacular
     Author URI: https://supernacular.net
-    Description: A Supernacular landing page
+    Description: xxx
     Version: 1.0
     License: GNU General Public License v2 or later
     License URI: http://www.gnu.org/licenses/gpl-2.0.html
     Text Domain: supernacular
 */
+* {
+  margin: 0;
+  padding: 0; }
+  *, *::before, *::after {
+    box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Lato', sans-serif; }
+
+.container {
+  padding: 0 5rem; }
+
+h1, h2, h3 {
+  font-family: 'Crimson Pro', serif; }
+
+h1 {
+  font-size: 3.5rem; }
+
+li {
+  list-style: none; }
+
+a:link,
+a:visited {
+  text-decoration: none; }
+
+.btn {
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: .8rem 3rem;
+  border-radius: 5px; }
+  .btn:focus {
+    outline: none; }
+
+.btn-full {
+  background-color: #FFB700;
+  color: #fff;
+  border: none; }
+
+#nav {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between; }
+
+#menu-header {
+  display: flex; }
+  #menu-header li:not(:first-child) {
+    margin-left: 3.5rem; }
+  #menu-header a {
+    text-transform: uppercase; }
