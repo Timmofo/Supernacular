@@ -8,4 +8,19 @@
 </head>
 <body <?php body_class(); ?>>
     
-<!-- HEADER HERE -->
+    <div class="container">
+        <header>
+            <nav class="nav">
+                <img src="#" alt="Logo">
+                <ul class="nav__menu">
+                    <li><a href="#">Approach</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="heading">
+                <h1>Make Users Crave Your Digital Product</h1>
+                <button class="btn btn-full">Contact Us</button>
+            </div>
+        </header>
