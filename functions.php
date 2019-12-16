@@ -1,8 +1,17 @@
 <?php
 
-// function files() {
-//     wp_enqueue_style('font-awesome', '//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-//     wp_enqueue_style('main_style', get_stylesheet_uri());
-// }
+function theme_files() {
+    wp_enqueue_script('main_styles', get_stylesheet_uri());
+}
 
-// add_action('wp_enqueue_scripts', 'files');
+add_action('wp_enqueue_scripts', 'theme_files');
+
+function theme_features() {
+    register_nav_menu('headerMenu', 'Header Menu');
+    register_nav_menu('footerMenu', 'Footer Menu');
+    register_nav_menu('footerLegal', 'FooterLegal');
+
+    add_theme_support('title-tag');
+}
+
+add_action('after_setup_theme', 'theme_features');
