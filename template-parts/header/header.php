@@ -8,19 +8,18 @@
 </head>
 <body <?php body_class(); ?>>
     
-    <div class="container">
-        <header>
-            <nav class="nav">
-                <img src="#" alt="Logo">
-                <ul class="nav__menu">
-                    <li><a href="#">Approach</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+    <header class="container">
+        <nav id="nav">
+            <img src="#" alt="Logo">
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'headerMenu'
+            ));
+            ?>
+        </nav>
 
-            <div class="heading">
-                <h1>Make Users Crave Your Digital Product</h1>
-                <button class="btn btn-full">Contact Us</button>
-            </div>
-        </header>
+        <div class="heading">
+            <h1><?php echo get_bloginfo('description'); ?></h1>
+            <button class="btn btn-full">Contact Us</button>
+        </div>
+    </header>
