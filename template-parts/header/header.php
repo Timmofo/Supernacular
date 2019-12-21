@@ -7,6 +7,17 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
+    <div id="nav-side" class="sidebar">
+        <a href="javascript:void(0)" class="btn-collapse" onclick="collapse()">&times;</a>
+        <?php
+        
+        $menu = wp_get_nav_menu_items('Header'); 
+
+        foreach ($menu as $menu_item): ?>
+            <a href="<?= $menu_item->url ?>"><?= $menu_item->title ?></a>
+        <?php endforeach; ?>
+    </div>
     
     <header class="container">
         <nav id="nav">
@@ -16,10 +27,6 @@
                 'theme_location' => 'headerMenu'
             ));
             ?>
-        </nav>
 
-        <div class="heading">
-            <h1><?php echo get_bloginfo('description'); ?></h1>
-            <button class="btn btn-full">Contact Us</button>
-        </div>
-    </header>
+            <button class="btn-expand" onclick="expand()">&#9776;</button>
+        </nav>
