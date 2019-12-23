@@ -37,23 +37,65 @@ html {
 
 body {
     font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: $color-primary;
 }
 
-// header {
-//     height: 100vh;
-//     background-color: $color-primary;
-// }
+header {
+    height: 100vh;
+    background-color: $color-primary;
+
+    display: flex;
+    flex-direction: column;
+
+    & .heading {
+        color: #fff;
+        margin: auto 0;
+    }
+}
+
+section {
+    margin: 0 -5rem;
+    padding: 5rem;
+
+    display: flex;
+
+    & div {
+        flex: 1;
+    }
+}
+
+main > section:nth-of-type(odd) {
+    background-color: #F0F2FC;
+}
 
 .container {
     padding: 0 5rem;
 }
 
-h1, h2, h3 {
+h1, h2 {
     font-family: 'Crimson Pro', serif;
 }
 
 h1 {
     font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+
+    &::after {
+        content: ' ';
+        display: block;
+        width: 80px;
+        border-bottom: 1px solid $color-yellow;
+        margin: 1rem 0;
+    }
+}
+
+h3, p {
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
 }
 
 li {
@@ -62,17 +104,24 @@ li {
 
 a:link,
 a:visited {
+    font-size: .8rem;
     text-decoration: none;
+}
+
+.highlight {
+    color: $color-secondary;
 }
 
 // BUTTON
 
 .btn {
-    font-size: 1rem;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: .05rem;
     text-align: center;
     text-transform: uppercase;
-    padding: .8rem 3rem;
     border-radius: 5px;
+    margin: 1.5rem 0;
 
     &:focus {
         outline: none;
@@ -83,12 +132,19 @@ a:visited {
     background-color: $color-yellow;
     color: #fff;
     border: none;
+    padding: .8rem 3rem;
+}
+
+.btn-outline {
+    border: 2px solid $color-primary;
+    color: $color-primary;
+    padding: .6rem 2rem;
 }
 
 // NAVIGATION
 
 #nav {
-    padding: 3rem 0;
+    margin: 3rem 0;
 
     display: flex;
     justify-content: space-between;
@@ -98,15 +154,28 @@ a:visited {
 #menu-header {
     display: flex;
 
-    & li:not(:first-child) {
-        margin-left: 3.5rem;
+    & .menu-item:not(:first-child) {
+        margin-left: 3rem;
     }
 
     & a {
-        // color: #fff;
+        letter-spacing: .1rem;
         text-transform: uppercase;
     }
 }
+
+.menu {
+
+    & .menu-item {
+        margin-bottom: .5rem;
+    }
+
+    & .menu-item a {
+        color: #fff;
+    }
+}
+
+
 
 // SIDEBAR
 
@@ -172,4 +241,68 @@ a:visited {
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
 }
-  
+
+// SECTIONS
+
+#section-testimonial, #section-how, #section-contact {
+    text-align: center;
+
+    h2::after {
+        margin: 1.5rem auto;
+    }
+}
+
+#section-testimonial {
+    padding: 3rem 5rem;
+
+    & h2 {
+        font-size: 1.5rem;
+
+        &::after {
+            margin: 1.5rem auto;
+        }
+    }
+
+    & .testimonials {
+        display: flex;
+        justify-content: space-evenly;
+
+        & div {
+            border: 1px solid $color-primary;
+        }
+    }
+}
+
+#section-contact {
+    & .contact-form {
+        border: 1px solid #CCCCCC;
+        border-radius: 5px;
+        padding: 5rem;
+    }
+}
+
+// FOOTER
+
+footer {
+    background-color: $color-primary;
+
+    display: flex;
+
+    & .footer-content, & .footer-sitemap {
+        color: #fff;
+        padding: 3rem 0;
+
+        flex: 1;
+
+        display: flex;
+
+        & p {
+            font-size: .8rem;
+            margin: 0;
+        }
+    }
+
+    & .footer-sitemap .widget_nav_menu:not(:first-child) {
+        margin-left: 5rem;
+    }
+}
