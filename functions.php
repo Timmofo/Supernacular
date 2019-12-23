@@ -17,3 +17,14 @@ function theme_features() {
 }
 
 add_action('after_setup_theme', 'theme_features');
+
+function theme_widgets() {
+    register_sidebar( array(
+        'name'          => 'Footer',
+        'id'            => 'footer',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
+    ));
+}
+
+add_action( 'widgets_init', 'theme_widgets' );
