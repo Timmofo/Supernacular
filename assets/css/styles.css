@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0; }
+  *, *::before, *::after {
+    box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: #122852; }
+
+header {
+  height: 100vh;
+  background-color: #122852;
+  display: flex;
+  flex-direction: column; }
+  header .heading {
+    color: #fff;
+    margin: auto 0; }
+
+section {
+  margin: 0 -5rem;
+  padding: 5rem;
+  display: flex; }
+  section div {
+    flex: 1; }
+
+main > section:nth-of-type(odd) {
+  background-color: #F0F2FC; }
+
+.container {
+  padding: 0 5rem; }
+
+h1, h2 {
+  font-family: 'Crimson Pro', serif; }
+
+h1 {
+  font-size: 3.5rem; }
+
+h2 {
+  font-size: 2.5rem; }
+  h2::after {
+    content: ' ';
+    display: block;
+    width: 80px;
+    border-bottom: 1px solid #FFB700;
+    margin: 1rem 0; }
+
+h3, p {
+  line-height: 1.8rem;
+  margin-bottom: 1rem; }
+
+li {
+  list-style: none; }
+
+a:link,
+a:visited {
+  font-size: .8rem;
+  text-decoration: none; }
+
+.highlight {
+  color: #F14F31; }
+
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: .05rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin: 1.5rem 0; }
+  .btn:focus {
+    outline: none; }
+
+.btn-full {
+  background-color: #FFB700;
+  color: #fff;
+  border: none;
+  padding: .8rem 3rem; }
+
+.btn-outline {
+  border: 2px solid #122852;
+  color: #122852;
+  padding: .6rem 2rem; }
+
+#nav {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+#menu-header {
+  display: flex; }
+  #menu-header .menu-item:not(:first-child) {
+    margin-left: 3rem; }
+  #menu-header a {
+    letter-spacing: .1rem;
+    text-transform: uppercase; }
+
+.menu .menu-item {
+  margin-bottom: .5rem; }
+
+.menu .menu-item a {
+  color: #fff; }
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.3s; }
+
+.sidebar a {
+  padding: 6px 30px;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s; }
+
+.sidebar a:hover {
+  color: #f1f1f1; }
+
+.sidebar .btn-collapse {
+  text-align: right; }
+
+.btn-expand {
+  font-size: 20px;
+  cursor: pointer;
+  color: #111;
+  padding: 10px 15px;
+  border: none; }
+
+.btn-expand:focus {
+  outline: none; }
+
+.btn-expand:hover {
+  color: #444; }
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  /* If you want a transition effect */
+  padding: 20px; }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px; }
+  .sidebar a {
+    font-size: 18px; } }
+
+#section-testimonial, #section-how, #section-contact {
+  text-align: center; }
+  #section-testimonial h2::after, #section-how h2::after, #section-contact h2::after {
+    margin: 1.5rem auto; }
+
+#section-testimonial {
+  padding: 3rem 5rem; }
+  #section-testimonial h2 {
+    font-size: 1.5rem; }
+    #section-testimonial h2::after {
+      margin: 1.5rem auto; }
+  #section-testimonial .testimonials {
+    display: flex;
+    justify-content: space-evenly; }
+    #section-testimonial .testimonials div {
+      border: 1px solid #122852; }
+
+#section-contact .contact-form {
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  padding: 5rem; }
+
+footer {
+  background-color: #122852;
+  display: flex; }
+  footer .footer-content, footer .footer-sitemap {
+    color: #fff;
+    padding: 3rem 0;
+    flex: 1;
+    display: flex; }
+    footer .footer-content p, footer .footer-sitemap p {
+      font-size: .8rem;
+      margin: 0; }
+  footer .footer-sitemap .widget_nav_menu:not(:first-child) {
+    margin-left: 5rem; }
