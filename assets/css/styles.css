@@ -64,7 +64,7 @@ a:visited {
 .highlight {
   color: #F14F31; }
 
-.btn {
+.btn, .wpcf7-submit {
   display: inline-block;
   font-weight: 700;
   letter-spacing: .05rem;
@@ -72,10 +72,10 @@ a:visited {
   text-transform: uppercase;
   border-radius: 5px;
   margin: 1.5rem 0; }
-  .btn:focus {
+  .btn:focus, .wpcf7-submit:focus {
     outline: none; }
 
-.btn-full {
+.btn-full, .wpcf7-submit {
   background-color: #FFB700;
   color: #fff;
   border: none;
@@ -106,58 +106,52 @@ a:visited {
 .menu .menu-item a {
   color: #fff; }
 
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 60px;
-  transition: 0.3s; }
+.wpcf7-form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+  .wpcf7-form .col {
+    flex: 1 0 45%;
+    display: flex;
+    flex-direction: column; }
+    .wpcf7-form .col label {
+      font-size: .8rem; }
+    .wpcf7-form .col .wpcf7-form-control-wrap {
+      display: block; }
+      .wpcf7-form .col .wpcf7-form-control-wrap.your-message {
+        height: 92%; }
+      .wpcf7-form .col .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+        position: absolute;
+        right: 0;
+        top: -55%; }
+    .wpcf7-form .col .wpcf7-form-control {
+      font-size: .8rem;
+      width: 100%;
+      border: 1px solid #D9D9D9;
+      border-radius: 5px;
+      margin: .2rem 0 .5rem 0;
+      padding: .8rem; }
+      .wpcf7-form .col .wpcf7-form-control:focus {
+        outline: none;
+        border: 1px solid #FFB700; }
+    .wpcf7-form .col .wpcf7-textarea {
+      height: 100%;
+      resize: vertical; }
+  .wpcf7-form .col:nth-of-type(2) {
+    margin-right: 10%; }
+  .wpcf7-form p {
+    margin: 0; }
+    .wpcf7-form p .wpcf7-submit {
+      width: 100%; }
+    .wpcf7-form p .ajax-loader {
+      display: inline; }
+  .wpcf7-form .wpcf7-response-output {
+    font-size: .8rem;
+    flex-basis: 100%;
+    margin: 0;
+    padding: 1rem; }
 
-.sidebar a {
-  padding: 6px 30px;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s; }
-
-.sidebar a:hover {
-  color: #f1f1f1; }
-
-.sidebar .btn-collapse {
-  text-align: right; }
-
-.btn-expand {
-  font-size: 20px;
-  cursor: pointer;
-  color: #111;
-  padding: 10px 15px;
-  border: none; }
-
-.btn-expand:focus {
-  outline: none; }
-
-.btn-expand:hover {
-  color: #444; }
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-  /* If you want a transition effect */
-  padding: 20px; }
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {
-    padding-top: 15px; }
-  .sidebar a {
-    font-size: 18px; } }
-
-#section-testimonial, #section-how, #section-contact {
+#section-testimonial h2, #section-how h2, #section-contact h2 {
   text-align: center; }
   #section-testimonial h2::after, #section-how h2::after, #section-contact h2::after {
     margin: 1.5rem auto; }
