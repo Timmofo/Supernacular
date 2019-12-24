@@ -64,7 +64,7 @@
                 <div>
                     <h2>Contact Us Now</h2>
                     <div class="contact-form">
-                        Form
+                        <?php echo do_shortcode('[contact-form-7 id="27" title="Contact Form"]'); ?>
                     </div>
                 </div>
             </section>
