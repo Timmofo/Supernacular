@@ -87,28 +87,33 @@ a:visited {
   padding: .6rem 2rem; }
 
 #nav {
-  margin: 3rem 0;
+  background-color: #fff;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  transition: background-color .2s ease-in;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-#menu-header {
-  display: flex; }
-  #menu-header .menu-item:not(:first-child) {
-    margin-left: 3rem; }
-  #menu-header a {
-    letter-spacing: .1rem;
-    text-transform: uppercase; }
-
-.menu .menu-item {
-  margin-bottom: .5rem; }
-
-.menu .menu-item a {
-  color: #fff; }
+  z-index: 2; }
+  #nav #menu-header {
+    display: flex; }
+    #nav #menu-header .menu-item {
+      letter-spacing: 0.05rem;
+      text-transform: uppercase; }
+      #nav #menu-header .menu-item a {
+        color: #122852; }
+    #nav #menu-header .menu-item:not(:first-child) {
+      margin-left: 3rem; }
+  #nav.top-of-page {
+    background-color: transparent;
+    box-shadow: none; }
+    #nav.top-of-page #menu-header .menu-item a {
+      color: #fff; }
 
 .wpcf7-form {
   display: flex;
@@ -146,7 +151,8 @@ a:visited {
   .wpcf7-form p {
     margin: 0; }
     .wpcf7-form p .wpcf7-submit {
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 0; }
     .wpcf7-form p .ajax-loader {
       display: inline; }
   .wpcf7-form .wpcf7-response-output {
@@ -157,10 +163,12 @@ a:visited {
 
 #section-testimonial h2, #section-how h2, #section-contact h2 {
   text-align: center; }
-  #section-testimonial h2::after, #section-how h2::after, #section-contact h2::after {
-    margin: 1.5rem auto; }
+
+#section-testimonial h2::after, #section-how h2::after, #section-contact h2::after {
+  margin: 1.5rem auto; }
 
 #section-testimonial {
+  text-align: center;
   padding: 3rem 5rem; }
   #section-testimonial h2 {
     font-size: 1.5rem; }
@@ -171,6 +179,9 @@ a:visited {
     justify-content: space-evenly; }
     #section-testimonial .testimonials div {
       border: 1px solid #122852; }
+
+#section-how {
+  text-align: center; }
 
 #section-contact .contact-form {
   border: 1px solid #CCCCCC;
@@ -188,5 +199,9 @@ footer {
     footer .footer-content p, footer .footer-sitemap p {
       font-size: .8rem;
       margin: 0; }
+  footer .footer-sitemap #menu-footer-menu .menu-item, footer .footer-sitemap #menu-footer-legal .menu-item {
+    margin-bottom: .5rem; }
+    footer .footer-sitemap #menu-footer-menu .menu-item a, footer .footer-sitemap #menu-footer-legal .menu-item a {
+      color: #fff; }
   footer .footer-sitemap .widget_nav_menu:not(:first-child) {
     margin-left: 5rem; }
