@@ -31,7 +31,7 @@ body {
 }
 
 header {
-    height: 100vh;
+    height: 83px; // EDIT ME LATER
     background-color: $color-primary;
 
     display: flex;
@@ -51,10 +51,18 @@ section {
 
     & div {
         flex: 1;
+
+        & h2, & h3 {
+            text-align: center;
+        }
+        
+        & h2::after {
+            margin: 1.5rem auto;
+        }
     }
 }
 
-main > section:nth-of-type(odd) {
+.front-page-content > section:nth-of-type(odd) {
     background-color: #F0F2FC;
 }
 
@@ -261,18 +269,6 @@ a:visited {
 }
 
 // SECTIONS
-
-#section-testimonial, #section-how, #section-contact {
-    & h2 {
-        text-align: center;
-    }
-    
-    & h2::after {
-        margin: 1.5rem auto;
-    }
-}
-
-// ^ IS IT NECESSARY?
 
 #section-testimonial {
     text-align: center;
