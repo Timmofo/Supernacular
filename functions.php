@@ -1,7 +1,7 @@
 <?php
 
 function theme_files() {
-    wp_enqueue_script('main_js', get_template_directory_uri().'/assets/js/script.js', array('jquery'), NULL, 1.0, true);
+    wp_enqueue_script('main_js', get_template_directory_uri().'/assets/js/script.js', array('jquery'), 1.0, true);
     wp_enqueue_style('google-font', '//fonts.googleapis.com/css?family=Crimson+Pro:600|Lato:400,700&display=swap');
     wp_enqueue_style('main_style', get_template_directory_uri().'/assets/css/styles.css');
 }
@@ -22,6 +22,13 @@ function theme_widgets() {
     register_sidebar( array(
         'name'          => 'Footer',
         'id'            => 'footer',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
+    ));
+
+    register_sidebar( array(
+        'name'          => 'Footer Sitemap',
+        'id'            => 'footer-sitemp',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>',
     ));

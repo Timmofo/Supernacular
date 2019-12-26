@@ -1,10 +1,9 @@
     <footer class="container">
         <div class="footer-content">
-            <img src="#" alt="">
-            <p>All Rights Reserved &copy; 2019 Supernacular </p>
+            <?php dynamic_sidebar('footer'); ?>
         </div>
         <div class="footer-sitemap">
-            <?php dynamic_sidebar('footer'); ?>
+            <?php dynamic_sidebar('footer-sitemap'); ?>
         </div>
     </footer>
 
