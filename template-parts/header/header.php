@@ -8,7 +8,7 @@
 </head>
 <body <?php body_class(); ?>>
 
-    <div id="nav-side" class="sidebar">
+    <!-- <div id="nav-side" class="sidebar">
         <a href="javascript:void(0)" class="btn-collapse" onclick="collapse()">&times;</a>
         <?php
         
@@ -17,10 +17,10 @@
         foreach ($menu as $menu_item): ?>
             <a href="<?= $menu_item->url ?>"><?= $menu_item->title ?></a>
         <?php endforeach; ?>
-    </div>
+    </div> -->
     
     <header class="container">
-        <nav id="nav">
+        <nav id="nav" class="container">
             <img src="#" alt="Logo">
             <?php
             wp_nav_menu(array(
@@ -28,5 +28,5 @@
             ));
             ?>
 
-            <button class="btn-expand" onclick="expand()">&#9776;</button>
+            <!-- <button class="btn-expand" onclick="expand()">&#9776;</button> -->
         </nav>
