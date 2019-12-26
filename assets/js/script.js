@@ -2,9 +2,13 @@
 
 jQuery(window).on("scroll", function() {
     var scrollPos = jQuery(window).scrollTop();
-    if (scrollPos <= 0) {
-        jQuery('#nav').addClass('top-of-page');
-    } else {
-        jQuery('#nav').removeClass('top-of-page');
+
+    // CHECK FOR FRONT PAGE
+    if (jQuery('body.home').length) {
+        if (scrollPos <= 0) {
+            jQuery('#nav').addClass('top-of-page');
+        } else {
+            jQuery('#nav').removeClass('top-of-page');
+        }
     }
 });
