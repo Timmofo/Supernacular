@@ -20,7 +20,7 @@
     </div> -->
     
     <header class="container" <?php if (is_front_page()) echo "style='height: 100vh;'"?>>
-        <nav id="nav" class="container">
+        <nav id="nav" class="container <?php if (is_front_page()) echo "top-of-page"?>">
             <a href="<?php echo home_url(); ?>">
                 <img src="#" alt="Logo">
             </a>
