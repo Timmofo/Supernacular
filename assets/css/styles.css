@@ -24,13 +24,26 @@ header {
 section {
   margin: 0 -5rem;
   padding: 5rem;
-  display: flex; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   section div {
     flex: 1; }
-    section div h2, section div h3 {
+    section div h2 {
       text-align: center; }
-    section div h2::after {
-      margin: 1.5rem auto; }
+      section div h2::after {
+        margin: 1.5rem auto; }
+    section div.align-left h2 {
+      text-align: left; }
+      section div.align-left h2::after {
+        margin: 1.5rem 0; }
+  section.pullquote {
+    background-color: #F14F31;
+    text-align: center;
+    padding: 5rem 10rem; }
+    section.pullquote p {
+      font-family: 'Crimson Pro', serif;
+      color: #fff; }
 
 .front-page-content > section:nth-of-type(odd) {
   background-color: #F0F2FC; }
@@ -40,21 +53,22 @@ section {
 
 h1, h2 {
   font-family: 'Crimson Pro', serif; }
-
-h1 {
-  font-size: 3.5rem; }
-
-h2 {
-  font-size: 2.5rem; }
-  h2::after {
+  h1::after, h2::after {
     content: ' ';
     display: block;
     width: 80px;
     border-bottom: 1px solid #FFB700;
     margin: 1rem 0; }
 
+h1 {
+  font-size: 3.5rem; }
+
+h2, blockquote p {
+  font-size: 2.5rem;
+  line-height: 3rem; }
+
 h3, p {
-  line-height: 1.8rem;
+  line-height: 1.5rem;
   margin-bottom: 1rem; }
 
 li {
@@ -82,8 +96,9 @@ a:visited {
 .btn-full, .wpcf7-submit {
   background-color: #FFB700;
   color: #fff;
+  padding: .8rem 3rem;
   border: none;
-  padding: .8rem 3rem; }
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.4); }
 
 .btn-outline {
   border: 2px solid #122852;
@@ -107,8 +122,15 @@ a:visited {
   #nav #menu-header {
     display: flex; }
     #nav #menu-header .menu-item {
-      letter-spacing: 0.05rem;
-      text-transform: uppercase; }
+      padding-bottom: .2rem;
+      letter-spacing: .05rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom .2s ease-in; }
+      #nav #menu-header .menu-item:hover {
+        border-bottom: 1px solid #FFB700; }
+      #nav #menu-header .menu-item.current-menu-item {
+        border-bottom: 1px solid #FFB700; }
       #nav #menu-header .menu-item a {
         color: #122852; }
     #nav #menu-header .menu-item:not(:first-child) {
@@ -168,10 +190,6 @@ a:visited {
 #section-testimonial {
   text-align: center;
   padding: 3rem 5rem; }
-  #section-testimonial h2 {
-    font-size: 1.5rem; }
-    #section-testimonial h2::after {
-      margin: 1.5rem auto; }
   #section-testimonial .testimonials {
     display: flex;
     justify-content: space-evenly; }
@@ -203,3 +221,14 @@ footer {
       color: #fff; }
   footer .footer-sitemap .widget_nav_menu:not(:first-child) {
     margin-left: 5rem; }
+
+#section-challenges h2 {
+  flex-basis: 30%; }
+
+#section-challenges p {
+  padding-left: 5rem;
+  border-left: 1px solid #F14F31;
+  flex: 70%; }
+
+#section-process {
+  flex-direction: column; }

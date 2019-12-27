@@ -48,16 +48,39 @@ section {
     padding: 5rem;
 
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     & div {
         flex: 1;
 
-        & h2, & h3 {
+        & h2{
             text-align: center;
+
+            &::after {
+                margin: 1.5rem auto;
+            }
         }
+
+        &.align-left {
+            h2 {
+                text-align: left;
         
-        & h2::after {
-            margin: 1.5rem auto;
+                &::after {
+                    margin: 1.5rem 0;
+                }
+            }
+        }
+    }
+
+    &.pullquote {
+        background-color: $color-secondary;
+        text-align: center;
+        padding: 5rem 10rem;
+
+        & p {
+            font-family: 'Crimson Pro', serif;
+            color: #fff;
         }
     }
 }
@@ -72,14 +95,6 @@ section {
 
 h1, h2 {
     font-family: 'Crimson Pro', serif;
-}
-
-h1 {
-    font-size: 3.5rem;
-}
-
-h2 {
-    font-size: 2.5rem;
 
     &::after {
         content: ' ';
@@ -90,8 +105,17 @@ h2 {
     }
 }
 
+h1 {
+    font-size: 3.5rem;
+}
+
+h2, blockquote p {
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
 h3, p {
-    line-height: 1.8rem;
+    line-height: 1.5rem;
     margin-bottom: 1rem;
 }
 
@@ -128,8 +152,9 @@ a:visited {
 .btn-full, .wpcf7-submit {
     background-color: $color-yellow;
     color: #fff;
-    border: none;
     padding: .8rem 3rem;
+    border: none;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
 }
 
 .btn-outline {
@@ -157,8 +182,19 @@ a:visited {
         display: flex;
 
         & .menu-item {
-            letter-spacing: 0.05rem;
+            padding-bottom: .2rem;
+            letter-spacing: .05rem;
             text-transform: uppercase;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom .2s ease-in;
+
+            &:hover {
+                border-bottom: 1px solid $color-yellow;
+            }
+
+            &.current-menu-item {
+                border-bottom: 1px solid $color-yellow;
+            }
 
             & a {
                 color: $color-primary;
@@ -274,14 +310,6 @@ a:visited {
     text-align: center;
     padding: 3rem 5rem;
 
-    & h2 {
-        font-size: 1.5rem;
-
-        &::after {
-            margin: 1.5rem auto;
-        }
-    }
-
     & .testimonials {
         display: flex;
         justify-content: space-evenly;
@@ -341,4 +369,22 @@ footer {
             margin-left: 5rem;
         }
     }
+}
+
+// PAGE : APPROACH
+
+#section-challenges {
+    & h2 {
+        flex-basis: 30%;
+    }
+
+    & p {
+        padding-left: 5rem;
+        border-left: 1px solid $color-secondary;
+        flex: 70%;
+    }
+}
+
+#section-process {
+    flex-direction: column;
 }
