@@ -18,7 +18,7 @@
         </section>
 
         <section>
-            <div>
+            <div class="align-left">
                 <h2>We Improve Any Digital Product</h2>
                 <p>Whether you have a corporate website, intranet, e-commerce platform or piece of software.</p>
             </div>
@@ -31,11 +31,10 @@
             <div>
 
             </div>
-            <div>
+            <div class="align-left">
                 <h2>The Size Of Your Company Doesn't Matter</h2>
                 <p>As a long-term partner, we have helped Het Urbanhuis through the growing pains of starting up.</p>
                 <p>Reducing bounce rates by <span class="highlight">23%</span> and increasing the visit time of users by <span class="highlight">29%</span>.</p>
-                <a href="#" class="btn btn-outline">Read The Story</a>
             </div>
         </section>
 
@@ -48,7 +47,7 @@
         </section>
 
         <section>
-            <div>
+            <div class="align-left">
                 <h2>What We Can Do For You</h2>
                 <p>We look at the most important improvements and start there. This can mean <span class="highlight">usability engineering</span>, improving the <span class="highlight">information architecture</span>, <span class="highlight">graphic design</span>, <span class="highlight">interaction design</span class="highlight">, and more. We always use analytics to give you tangible results.</p>
                 <a href="#" class="btn btn-outline">Learn More</a>

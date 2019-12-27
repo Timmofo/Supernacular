@@ -7,7 +7,7 @@
     <main class="container">
         <section id="section-contact">
             <div>
-                <h2>Contact Us Now</h2>
+                <h1>Contact Us Now</h1>
                 <!-- <h3>And Start Growing Your Business Today</h3> -->
                 <div class="contact-form">
                     <?php echo do_shortcode('[contact-form-7 id="27" title="Contact Form"]'); ?>
