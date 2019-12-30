@@ -32,6 +32,10 @@ body {
 
 header {
     height: 83px; // EDIT ME LATER
+    background-image: url("../images/header-background_image-grid.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     background-color: $color-primary;
 
     display: flex;
@@ -41,6 +45,10 @@ header {
         color: #fff;
         margin: auto 0;
     }
+}
+
+.container {
+    padding: 0 5rem;
 }
 
 section {
@@ -85,12 +93,9 @@ section {
     }
 }
 
-.front-page-content > section:nth-of-type(odd) {
-    background-color: #F0F2FC;
-}
-
-.container {
-    padding: 0 5rem;
+.logo {
+    width: 160px;
+    padding-bottom: 0.5rem;
 }
 
 h1, h2 {
@@ -231,6 +236,10 @@ a:visited {
 // CONTACT FORM
 
 .wpcf7-form {
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 5rem;
+
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -288,7 +297,6 @@ a:visited {
 
         & .wpcf7-submit {
             width: 100%;
-            margin-bottom: 0;
         }
 
         & .ajax-loader {
@@ -301,34 +309,6 @@ a:visited {
         flex-basis: 100%;
         margin: 0;
         padding: 1rem;
-    }
-}
-
-// SECTIONS
-
-#section-testimonial {
-    text-align: center;
-    padding: 3rem 5rem;
-
-    & .testimonials {
-        display: flex;
-        justify-content: space-evenly;
-
-        & div {
-            border: 1px solid $color-primary;
-        }
-    }
-}
-
-#section-how {
-    text-align: center;
-}
-
-#section-contact {
-    & .contact-form {
-        border: 1px solid #CCCCCC;
-        border-radius: 5px;
-        padding: 5rem;
     }
 }
 
@@ -353,6 +333,11 @@ footer {
         }
     }
 
+    & .footer-content {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
     // FOOTER SITEMAP MENUS
     & .footer-sitemap {
         & #menu-footer-menu, #menu-footer-legal {
@@ -368,6 +353,63 @@ footer {
         & .widget_nav_menu:not(:first-child) {
             margin-left: 5rem;
         }
+    }
+}
+
+// PAGE: FRONT PAGE
+
+#front-page-content {
+    & section {
+        flex-flow: row wrap;
+    }
+
+    & > section:nth-of-type(odd) {
+        background-color: #F0F2FC;
+    }
+
+    & #section-what, & #section-result, & #section-services {
+        padding-bottom: 0;
+
+        & div {
+            margin: 0 2rem;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    #section-testimonial {
+        text-align: center;
+        padding: 3rem 5rem;
+    
+        & .testimonials {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+    
+            & img {
+                height: 50px;
+                flex: 1;
+            }
+    
+            & #drop-logo {
+                margin-top: .5rem;
+            }
+        }
+    }
+
+    #section-how {
+        text-align: center;
     }
 }
 
