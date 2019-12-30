@@ -97,6 +97,7 @@ section {
 
 h1, h2 {
     font-family: 'Crimson Pro', serif;
+    font-weight: 500;
 
     &::after {
         content: ' ';
@@ -186,7 +187,7 @@ a:visited {
     }
 
     &:active {
-        background-color: #abc2ed;
+        background-color: #c0d1f1;
     }
 }
 
@@ -253,7 +254,74 @@ a:visited {
                 }
             }
         }
+
+        & .btn-expand {
+            color: #fff;
+
+            &:hover {
+                background-color: #173469;
+            }
+        }
     }
+}
+
+// COLLAPSIBLE SIDEBAR
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: #0e1f3f;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: all .5s;
+
+    & a {
+        padding: 8px 8px 8px 40px;
+        font-size: 25px;
+        color: $color-secondary;
+        display: block;
+        transition: all .3s;
+    
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    & .btn-collapse {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+}
+
+.btn-expand {
+    font-size: 20px;
+    color: $color-primary;
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all .2s ease-out;
+    display: none;
+
+    &:hover {
+        background-color: #d5e1f6;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+  
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
 }
 
 // CONTACT FORM
@@ -413,9 +481,8 @@ footer {
                 margin-right: 0;
             }
 
-            & img {
-                width: 100%;
-                height: 100%;
+            &.image-container {
+                align-self: flex-end;
             }
         }
     }
@@ -429,7 +496,7 @@ footer {
             justify-content: space-evenly;
     
             & img {
-                height: 50px;
+                height: 40px;
                 flex: 1;
             }
     
@@ -575,4 +642,170 @@ footer {
 .section-title {
     margin-bottom: -5rem;
     text-align: center;
+}
+
+// MEDIA QUERIES
+
+@media only screen and (max-width: 992px) {
+    #front-page-content {
+        & section {
+            flex-flow: column nowrap;
+            text-align: center;
+
+            & h2::after {
+                margin: 1.5rem auto;
+            }
+
+            &#section-what, &#section-result, &#section-services {
+                & div {
+                    margin: 0;
+    
+                    &.image-container {
+                        align-self: center;
+                        width: 70%;
+        
+                        order: 2;
+                    }
+                }
+            }
+
+            &#section-contact {
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0 2.5rem;
+    }
+
+    .menu-header-container {
+        display: none;
+    }
+
+    .btn-expand {
+        display: block;
+    }
+
+    #front-page-content {
+        & section {
+            &#section-what, &#section-result, &#section-services {
+                & div {
+                    &.image-container {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+
+    .wpcf7 {
+        .wpcf7-form {
+            padding: 2.5rem;
+            flex-flow: column nowrap;
+
+            .col {
+                margin-right: 0;
+            }
+
+            & > p {
+                text-align: center;
+
+                & .wpcf7-submit {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #front-page-content {
+        & section {
+            &#section-testimonial {
+                & .testimonials {
+                    & img {
+                        height: 30px;
+                    }
+                }
+            }
+
+            &#section-what, &#section-result, &#section-services {
+                & div {
+                    &.image-container {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        flex-direction: column;
+
+        & .footer-content, & .footer-sitemap {
+            align-items: center;
+        }
+
+        & .footer-sitemap {
+            display: none;
+        }
+
+        & .footer-sitemap-collapsible {
+            display: block;
+        }
+    }
+    
+}
+
+// ACCORDION
+
+.footer-sitemap-collapsible {
+    display: none;
+    padding: 3rem 0;
+    margin-top: -5rem;
+
+    & .collapsible {
+        & h3 {
+            margin: 0;
+        }
+    }
+
+    & .content {
+        flex-direction: column;
+    }
+}
+
+.collapsible {
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+
+    &.active, &:hover {
+        background-color: #173469;
+    }
+}
+  
+.content {
+    display: none;
+    overflow: hidden;
+    background-color: #fff;
+
+    & a {
+        color: $color-primary;
+        padding: .5rem 1rem;
+        background-color: transparent;
+        transition: all .2s;
+
+        &:hover {
+            background-color: #d5e1f6;
+        }
+    }
 }

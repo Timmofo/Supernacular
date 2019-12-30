@@ -55,7 +55,8 @@ section {
   padding-bottom: 0.5rem; }
 
 h1, h2 {
-  font-family: 'Crimson Pro', serif; }
+  font-family: 'Crimson Pro', serif;
+  font-weight: 500; }
   h1::after, h2::after {
     content: ' ';
     display: block;
@@ -119,7 +120,7 @@ a:visited {
   .btn-outline:hover {
     background-color: #d5e1f6; }
   .btn-outline:active {
-    background-color: #abc2ed; }
+    background-color: #c0d1f1; }
 
 #nav {
   background-color: #fff;
@@ -157,6 +158,56 @@ a:visited {
     box-shadow: none; }
     #nav.top-of-page #menu-header .menu-item a {
       color: #fff; }
+    #nav.top-of-page .btn-expand {
+      color: #fff; }
+      #nav.top-of-page .btn-expand:hover {
+        background-color: #173469; }
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: #0e1f3f;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: all .5s; }
+  .sidebar a {
+    padding: 8px 8px 8px 40px;
+    font-size: 25px;
+    color: #F14F31;
+    display: block;
+    transition: all .3s; }
+    .sidebar a:hover {
+      color: #fff; }
+  .sidebar .btn-collapse {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px; }
+
+.btn-expand {
+  font-size: 20px;
+  color: #122852;
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all .2s ease-out;
+  display: none; }
+  .btn-expand:hover {
+    background-color: #d5e1f6; }
+  .btn-expand:focus {
+    outline: none; }
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px; }
+  .sidebar a {
+    font-size: 18px; } }
 
 .wpcf7-form {
   border: 1px solid #CCCCCC;
@@ -246,9 +297,8 @@ footer {
       margin-left: 0; }
     #front-page-content #section-what div:last-child, #front-page-content #section-result div:last-child, #front-page-content #section-services div:last-child {
       margin-right: 0; }
-    #front-page-content #section-what div img, #front-page-content #section-result div img, #front-page-content #section-services div img {
-      width: 100%;
-      height: 100%; }
+    #front-page-content #section-what div.image-container, #front-page-content #section-result div.image-container, #front-page-content #section-services div.image-container {
+      align-self: flex-end; }
 
 #front-page-content #section-testimonial {
   padding: 3rem 5rem; }
@@ -257,7 +307,7 @@ footer {
     flex-flow: row wrap;
     justify-content: space-evenly; }
     #front-page-content #section-testimonial .testimonials img {
-      height: 50px;
+      height: 40px;
       flex: 1; }
     #front-page-content #section-testimonial .testimonials #drop-logo {
       margin-top: .5rem; }
@@ -344,3 +394,84 @@ footer {
 .section-title {
   margin-bottom: -5rem;
   text-align: center; }
+
+@media only screen and (max-width: 992px) {
+  #front-page-content section {
+    flex-flow: column nowrap;
+    text-align: center; }
+    #front-page-content section h2::after {
+      margin: 1.5rem auto; }
+    #front-page-content section#section-what div, #front-page-content section#section-result div, #front-page-content section#section-services div {
+      margin: 0; }
+      #front-page-content section#section-what div.image-container, #front-page-content section#section-result div.image-container, #front-page-content section#section-services div.image-container {
+        align-self: center;
+        width: 70%;
+        order: 2; }
+    #front-page-content section#section-contact {
+      text-align: left; } }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 2.5rem; }
+  .menu-header-container {
+    display: none; }
+  .btn-expand {
+    display: block; }
+  #front-page-content section#section-what div.image-container, #front-page-content section#section-result div.image-container, #front-page-content section#section-services div.image-container {
+    width: 80%; }
+  .wpcf7 .wpcf7-form {
+    padding: 2.5rem;
+    flex-flow: column nowrap; }
+    .wpcf7 .wpcf7-form .col {
+      margin-right: 0; }
+    .wpcf7 .wpcf7-form > p {
+      text-align: center; }
+      .wpcf7 .wpcf7-form > p .wpcf7-submit {
+        width: auto; } }
+
+@media only screen and (max-width: 600px) {
+  #front-page-content section#section-testimonial .testimonials img {
+    height: 30px; }
+  #front-page-content section#section-what div.image-container, #front-page-content section#section-result div.image-container, #front-page-content section#section-services div.image-container {
+    width: 100%; }
+  footer {
+    flex-direction: column; }
+    footer .footer-content, footer .footer-sitemap {
+      align-items: center; }
+    footer .footer-sitemap {
+      display: none; }
+    footer .footer-sitemap-collapsible {
+      display: block; } }
+
+.footer-sitemap-collapsible {
+  display: none;
+  padding: 3rem 0;
+  margin-top: -5rem; }
+  .footer-sitemap-collapsible .collapsible h3 {
+    margin: 0; }
+  .footer-sitemap-collapsible .content {
+    flex-direction: column; }
+
+.collapsible {
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none; }
+  .collapsible.active, .collapsible:hover {
+    background-color: #173469; }
+
+.content {
+  display: none;
+  overflow: hidden;
+  background-color: #fff; }
+  .content a {
+    color: #122852;
+    padding: .5rem 1rem;
+    background-color: transparent;
+    transition: all .2s; }
+    .content a:hover {
+      background-color: #d5e1f6; }
