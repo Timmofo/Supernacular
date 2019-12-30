@@ -11,13 +11,13 @@
 
         <section id="section-intro">
             <h1>
-                We are <span class="highlight">Supernacular.</span></br>
+                We are <span class="highlight">Supernacular</span>.</br>
                 If there is one thing we are passionate</br>
                 — quality products.
             </h1>
         </section>
 
-        <section class="justify-center">
+        <section>
             <h2>We Exist For A Mission</h2>
             <p>Supernacular was founded in the Netherlands in 2019. Since then, we have been working on different facets of UX design: web design, copywriting, information architecture, usability design and much more.</p>
             <p>We are passionate to improve your product to be at the top of its game. We want your product to be Supernacular. Of such outstanding quality that your customers cannot put it down. Fueled by our curiosity to truly understand your customers and products, we can guarantee to improve your product on every design iteration.</p>
