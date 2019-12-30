@@ -22,13 +22,13 @@
                 <h2>We Improve Any Digital Product</h2>
                 <p>Whether you have a corporate website, intranet, e-commerce platform or piece of software.</p>
             </div>
-            <div>
+            <div class="image-container">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/people-build.svg">
             </div>
         </section>
 
         <section id="section-result">
-            <div>
+            <div class="image-container">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/people-team.svg">
             </div>
             <div>
@@ -52,7 +52,7 @@
                 <p>We look at the most important improvements and start there. This can mean <span class="highlight">usability engineering</span>, improving the <span class="highlight">information architecture</span>, <span class="highlight">graphic design</span>, <span class="highlight">interaction design</span class="highlight">, and more. We always use analytics to give you tangible results.</p>
                 <a href="/approach" class="btn btn-outline">Learn More</a>
             </div>
-            <div>
+            <div class="image-container">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/people-idea.svg">
             </div>
         </section>
