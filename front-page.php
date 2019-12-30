@@ -2,34 +2,34 @@
 
         <div class="heading">
             <h1><?php echo get_bloginfo('description'); ?></h1>
-            <a class="btn btn-full">Contact Us</a>
+            <a href="/contact" class="btn btn-full">Contact Us</a>
         </div>
     </header>
 
-    <main class="front-page-content container">
+    <main id="front-page-content" class="container">
         <section id="section-testimonial">
             <div>
                 <h2>We've Created <span class="highlight">Exceptional</span> User Experiences</h2>
                 <div class="testimonials">
-                    <div>Hello1</div>
-                    <div>Hello2</div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/heturbanhuis-logo.svg" alt="Heturbanhuis.nl">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/drop-logo.svg" id="drop-logo" alt="Dropby.today">
                 </div>
             </div>
         </section>
 
-        <section>
+        <section id="section-what">
             <div class="align-left">
                 <h2>We Improve Any Digital Product</h2>
                 <p>Whether you have a corporate website, intranet, e-commerce platform or piece of software.</p>
             </div>
             <div>
-
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/people-build.svg">
             </div>
         </section>
 
-        <section>
+        <section id="section-result">
             <div>
-
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/people-team.svg">
             </div>
             <div class="align-left">
                 <h2>The Size Of Your Company Doesn't Matter</h2>
@@ -46,14 +46,14 @@
             </div>
         </section>
 
-        <section>
+        <section id="section-services">
             <div class="align-left">
                 <h2>What We Can Do For You</h2>
                 <p>We look at the most important improvements and start there. This can mean <span class="highlight">usability engineering</span>, improving the <span class="highlight">information architecture</span>, <span class="highlight">graphic design</span>, <span class="highlight">interaction design</span class="highlight">, and more. We always use analytics to give you tangible results.</p>
-                <a href="#" class="btn btn-outline">Learn More</a>
+                <a href="/approach" class="btn btn-outline">Learn More</a>
             </div>
             <div>
-
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/people-idea.svg">
             </div>
         </section>
 
