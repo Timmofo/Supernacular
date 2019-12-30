@@ -22,7 +22,11 @@
     <header class="container" <?php if (is_front_page()) echo "style='height: 100vh;'"?>>
         <nav id="nav" class="container <?php if (is_front_page()) echo "top-of-page"?>">
             <a href="<?php echo home_url(); ?>">
-                <img src="#" alt="Logo">
+            <?php if (is_front_page()) { ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/supernacular-logo-white.svg" alt="Logo" class="logo">
+            <?php } else { ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/supernacular-logo-full.svg" alt="Logo" class="logo">
+            <?php } ?>
             </a>
             <?php
             wp_nav_menu(array(
