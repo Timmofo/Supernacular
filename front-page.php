@@ -7,7 +7,7 @@
     </header>
 
     <main id="front-page-content" class="container">
-        <section id="section-testimonial" class="justify-center">
+        <section id="section-testimonial" class="align-center">
             <div>
                 <h2>We've Created <span class="highlight">Exceptional</span> User Experiences</h2>
                 <div class="testimonials">
@@ -23,13 +23,13 @@
                 <p>Whether you have a corporate website, intranet, e-commerce platform or piece of software.</p>
             </div>
             <div class="image-container">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/people-build.svg">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/people-team.svg">
             </div>
         </section>
 
         <section id="section-result">
             <div class="image-container">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/people-team.svg">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/people-build.svg">
             </div>
             <div>
                 <h2>The Size Of Your Company Doesn't Matter</h2>
@@ -38,7 +38,7 @@
             </div>
         </section>
 
-        <section id="section-how" class="justify-center">
+        <section id="section-how" class="align-center">
             <div>
                 <h2>How Do We Get Results</h2>
                 <p>It is about understanding your users better than they understand themselves.</p>
@@ -57,7 +57,7 @@
             </div>
         </section>
 
-        <section id="section-contact">
+        <section id="section-contact" class="align-center">
             <div>
                 <h2>Contact Us Now</h2>
                 <div class="contact-form">

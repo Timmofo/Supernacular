@@ -8,7 +8,7 @@
 </head>
 <body <?php body_class(); ?>>
 
-    <div id="nav-side" class="sidebar">
+    <div id="nav-side">
         <a href="javascript:void(0)" class="btn-collapse" onclick="collapse()">&times;</a>
         <a href="<?php echo home_url(); ?>">Home</a>
         <?php 

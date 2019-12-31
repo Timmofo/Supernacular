@@ -4,17 +4,17 @@
 
     </header>
 
-    <main class="about-page-content container">
-        <section class="section-title justify-center">
+    <main id="about-page-content" class="container">
+        <section class="section-title align-center">
             <h1>About Us</h1>
         </section>
 
         <section id="section-intro">
-            <h1>
+            <h2>
                 We are <span class="highlight">Supernacular</span>.</br>
                 If there is one thing we are passionate</br>
                 — quality products.
-            </h1>
+            </h2>
         </section>
 
         <section>
@@ -37,17 +37,14 @@
                 <h2>We Strive As A Team</h2>
                 <p>Our team consists of 3 full-time employees. We are rapidly expanding our team to meet the needs of our customers. That’s why we have a network filled with extraordinarily talented freelancers and agencies to work with. Working together with others ensures that we can fully adjust our delivery speed to fill your needs. On top of that, we always have the expertise available to fully support you. All of the people we work with are carefully selected by us. This means that all of them can live up to your standards.</p>
             </div>
-            <div>
-                <img src="#">
-            </div>
         </section>
 
-        <section class="justify-center">
+        <section class="align-center">
             <h2>We Believe In Dedication</h2>
             <p>We love to work tightly together with you. That’s why we will fly to your location if the project requires our full attention. This way, we can meet your team and your customers to truly understand the complexities of the situation. Because the solutions we provide should not only work for your customers, but also work in your business context.</p>
         </section>
 
-        <section class="justify-center">
+        <section class="align-center">
             <h2>Let’s Work Together</h2>
             <p>We can help you with your digital success today. Drop us a message now.</p>
             <a href="/contact" class="btn btn-full">Contact Us</a>

@@ -1,14 +1,17 @@
     <footer class="container">
         <div class="footer-content">
-            <?php dynamic_sidebar('footer'); ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/supernacular-logo-white.svg" alt="Logo" class="logo">
+            <p>All Rights Reserved &copy; 2019 Supernacular</p>
         </div>
+
         <div class="footer-sitemap">
-            <?php dynamic_sidebar('footer-sitemap'); ?>
+            <?php dynamic_sidebar('footer'); ?>
         </div>
 
         <div class="footer-sitemap-collapsible">
             <button type="button" class="collapsible">
                 <h3>Explore</h3>
+                <span>&plus;</span>
             </button>
             <div class="content">
             <?php 
@@ -21,6 +24,7 @@
 
             <button type="button" class="collapsible">
                 <h3>Legal</h3>
+                <span>&plus;</span>
             </button>
             <div class="content">
                 <?php 

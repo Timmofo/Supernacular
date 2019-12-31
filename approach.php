@@ -4,8 +4,8 @@
 
     </header>
 
-    <main class="container">
-        <section class="section-title justify-center">
+    <main id="approach-page-content" class="container">
+        <section class="section-title align-center">
             <h1>Approach</h1>
         </section>
 
