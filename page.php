@@ -6,7 +6,7 @@
         the_post(); ?>
 
         <main class="container">
-            <section class="section-title">
+            <section class="section-title align-center">
                 <h1><?php the_title(); ?></h1>
             </section>
 
