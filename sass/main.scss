@@ -536,16 +536,19 @@ header {
         padding: 3rem 5rem;
     
         & .testimonials {
+            padding: 0 10rem;
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: row wrap;
             justify-content: space-evenly;
     
             & img {
                 flex: 1;
+                margin: 0 2rem;
                 height: 40px;
 
                 &#drop-logo {
                     margin-top: .5rem;
+                    margin-bottom: 0;
                 }
             }
         }
@@ -728,6 +731,12 @@ header {
             }
         }
 
+        & #section-testimonial {
+            & .testimonials {
+                padding: 0;
+            }
+        }
+
         & #section-what, & #section-result, & #section-services {
             & div {
                 &:first-child, &:last-child {
@@ -848,7 +857,7 @@ header {
             &#section-testimonial {
                 & .testimonials {
                     & img {
-                        height: 30px;
+                        margin-bottom: 2rem;
                     }
                 }
             }

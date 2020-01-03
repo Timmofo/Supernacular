@@ -331,14 +331,17 @@ header {
 #front-page-content #section-testimonial {
   padding: 3rem 5rem; }
   #front-page-content #section-testimonial .testimonials {
+    padding: 0 10rem;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-evenly; }
     #front-page-content #section-testimonial .testimonials img {
       flex: 1;
+      margin: 0 2rem;
       height: 40px; }
       #front-page-content #section-testimonial .testimonials img#drop-logo {
-        margin-top: .5rem; }
+        margin-top: .5rem;
+        margin-bottom: 0; }
 
 #front-page-content #section-what, #front-page-content #section-result, #front-page-content #section-services {
   padding-bottom: 0; }
@@ -436,6 +439,8 @@ header {
     text-align: center; }
     #front-page-content section h2::after {
       margin: 1.5rem auto; }
+  #front-page-content #section-testimonial .testimonials {
+    padding: 0; }
   #front-page-content #section-what div:first-child, #front-page-content #section-what div:last-child, #front-page-content #section-result div:first-child, #front-page-content #section-result div:last-child, #front-page-content #section-services div:first-child, #front-page-content #section-services div:last-child {
     margin: 0; }
   #front-page-content #section-what div.image-container, #front-page-content #section-result div.image-container, #front-page-content #section-services div.image-container {
@@ -487,7 +492,7 @@ header {
   .wpcf7 .wpcf7-form {
     padding: 1.5rem; }
   #front-page-content section#section-testimonial .testimonials img {
-    height: 30px; }
+    margin-bottom: 2rem; }
   #front-page-content section#section-what div.image-container, #front-page-content section#section-result div.image-container, #front-page-content section#section-services div.image-container {
     width: 100%; }
   #approach-page-content #section-process .process-list .process-item span {
