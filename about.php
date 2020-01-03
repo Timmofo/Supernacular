@@ -12,8 +12,8 @@
         <section id="section-intro">
             <h2>
                 We are <span class="highlight">Supernacular</span>.</br>
-                If there is one thing we are passionate</br>
-                — quality products.
+                If there is one thing we are passionate,</br>
+                it's quality products.
             </h2>
         </section>
 
