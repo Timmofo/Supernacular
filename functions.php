@@ -5,6 +5,12 @@ function theme_files() {
     wp_enqueue_script('font_awesome', '//kit.fontawesome.com/74bf3eb8e8.js');
     wp_enqueue_style('google-font', '//fonts.googleapis.com/css?family=Crimson+Pro:300,500|Lato:400,700&display=swap');
     wp_enqueue_style('main_style', get_template_directory_uri().'/assets/css/styles.css');
+
+    $passeddata = array(
+        'templatedirectory' => get_template_directory_uri()
+    );
+
+    wp_localize_script('main_js', 'PassedData', $passeddata);
 }
 
 add_action('wp_enqueue_scripts', 'theme_files');

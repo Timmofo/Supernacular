@@ -15,10 +15,10 @@ jQuery(window).on("scroll", function() {
     if (jQuery('body.home').length) {
         if (scrollPos <= 0) {
             jQuery('#nav').addClass('top-of-page');
-            jQuery('#nav .logo').attr("src", "/wp-content/themes/Supernacular/assets/images/supernacular-logo-white.svg");
+            jQuery('#nav .logo').attr("src", PassedData.templatedirectory+"/assets/images/supernacular-logo-white.svg");
         } else {
             jQuery('#nav').removeClass('top-of-page');
-            jQuery('#nav .logo').attr("src", "/wp-content/themes/Supernacular/assets/images/supernacular-logo-full.svg");
+            jQuery('#nav .logo').attr("src", PassedData.templatedirectory+"/assets/images/supernacular-logo-full.svg");
         }
     }
 });
