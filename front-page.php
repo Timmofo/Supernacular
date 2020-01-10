@@ -2,6 +2,7 @@
 
         <div class="heading">
             <h1><?php echo get_bloginfo('description'); ?></h1>
+            <p>Conversion rate optimilisation, User Experience Design and much more. Everything to satisfy you and your customers.</p>
             <a href="/contact" class="btn btn-full">Contact Us</a>
         </div>
     </header>

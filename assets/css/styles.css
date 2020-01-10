@@ -60,7 +60,8 @@ h1, h2 {
     margin: 1.5rem 0; }
 
 h1 {
-  font-size: 3.5rem; }
+  font-size: 3.5rem;
+  line-height: 4rem; }
 
 h2, blockquote p {
   font-size: 2.5rem;
@@ -491,6 +492,8 @@ header {
 @media only screen and (max-width: 600px) {
   .wpcf7 .wpcf7-form {
     padding: 1.5rem; }
+  header {
+    background-attachment: fixed; }
   #front-page-content section#section-testimonial .testimonials img {
     margin-bottom: 2rem; }
   #front-page-content section#section-what div.image-container, #front-page-content section#section-result div.image-container, #front-page-content section#section-services div.image-container {
