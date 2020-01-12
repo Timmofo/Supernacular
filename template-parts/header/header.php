@@ -19,7 +19,7 @@
         <?php endforeach; ?>
     </div>
     
-    <header class="container" <?php if (is_front_page()) echo "style='height: 100vh;'"?>>
+    <header class="container" <?php if (is_front_page()) echo "style='min-height: 100vh;'"?>>
         <nav id="nav" class="container <?php if (is_front_page()) echo "top-of-page"?>">
             <a href="<?php echo home_url(); ?>">
             <?php if (is_front_page()) { ?>
