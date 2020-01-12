@@ -5,7 +5,8 @@
     box-sizing: inherit; }
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%; }
 
 body {
   color: #122852;
@@ -81,6 +82,15 @@ a:link,
 a:visited {
   font-size: .8rem;
   text-decoration: none; }
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+  -webkit-appearance: none;
+  border-radius: 0; }
 
 .btn:link, .btn:visited, .wpcf7-submit {
   display: inline-block;
@@ -204,6 +214,7 @@ a:visited {
 .wpcf7-form {
   text-align: left;
   border: 1px solid #CCCCCC;
+  background-color: #fff;
   border-radius: 5px;
   padding: 5rem;
   display: flex;
@@ -223,6 +234,7 @@ a:visited {
         .wpcf7-form .col p label .wpcf7-form-control-wrap .wpcf7-form-control {
           width: 100%;
           font-size: .8rem;
+          background-color: #FAFAFA;
           border: 1px solid #D9D9D9;
           border-radius: 5px;
           padding: .8rem; }
@@ -344,14 +356,15 @@ header {
         margin-top: .5rem;
         margin-bottom: 0; }
 
-#front-page-content #section-what, #front-page-content #section-result, #front-page-content #section-services {
-  padding-bottom: 0; }
-  #front-page-content #section-what div:first-child, #front-page-content #section-result div:first-child, #front-page-content #section-services div:first-child {
-    margin-right: 2rem; }
-  #front-page-content #section-what div:last-child, #front-page-content #section-result div:last-child, #front-page-content #section-services div:last-child {
-    margin-left: 2rem; }
-  #front-page-content #section-what div.image-container, #front-page-content #section-result div.image-container, #front-page-content #section-services div.image-container {
-    align-self: flex-end; }
+#front-page-content #section-what > div:first-child, #front-page-content #section-result > div:first-child, #front-page-content #section-how > div:first-child {
+  margin-right: 2rem; }
+
+#front-page-content #section-what > div:last-child, #front-page-content #section-result > div:last-child, #front-page-content #section-how > div:last-child {
+  margin-left: 2rem; }
+
+#front-page-content #section-what > div.image-container, #front-page-content #section-result > div.image-container, #front-page-content #section-how > div.image-container {
+  align-self: flex-end;
+  margin-bottom: -5rem; }
 
 #approach-page-content #section-challenges {
   flex-flow: row wrap;
@@ -442,10 +455,11 @@ header {
       margin: 1.5rem auto; }
   #front-page-content #section-testimonial .testimonials {
     padding: 0; }
-  #front-page-content #section-what div:first-child, #front-page-content #section-what div:last-child, #front-page-content #section-result div:first-child, #front-page-content #section-result div:last-child, #front-page-content #section-services div:first-child, #front-page-content #section-services div:last-child {
+  #front-page-content #section-what div:first-child, #front-page-content #section-what div:last-child, #front-page-content #section-result div:first-child, #front-page-content #section-result div:last-child, #front-page-content #section-how div:first-child, #front-page-content #section-how div:last-child {
     margin: 0; }
-  #front-page-content #section-what div.image-container, #front-page-content #section-result div.image-container, #front-page-content #section-services div.image-container {
+  #front-page-content #section-what div.image-container, #front-page-content #section-result div.image-container, #front-page-content #section-how div.image-container {
     margin: 0;
+    margin-bottom: -5rem;
     width: 70%;
     order: 2;
     align-self: center; }
@@ -468,10 +482,12 @@ header {
 @media only screen and (max-width: 768px) {
   .container {
     padding: 0 2.5rem; }
-  #nav .menu-header-container {
-    display: none; }
-  #nav .btn-expand {
-    display: block; }
+  header {
+    background-attachment: scroll; }
+    header #nav .menu-header-container {
+      display: none; }
+    header #nav .btn-expand {
+      display: block; }
   .wpcf7 .wpcf7-form {
     flex-flow: column wrap; }
     .wpcf7 .wpcf7-form .col:nth-of-type(2) {
@@ -494,9 +510,17 @@ header {
     padding: 1.5rem; }
   header {
     background-attachment: fixed; }
+    header .heading {
+      margin-top: 10rem; }
   #front-page-content section#section-testimonial .testimonials img {
     margin-bottom: 2rem; }
-  #front-page-content section#section-what div.image-container, #front-page-content section#section-result div.image-container, #front-page-content section#section-services div.image-container {
+  #front-page-content section#section-what div.image-container, #front-page-content section#section-result div.image-container, #front-page-content section#section-how div.image-container {
     width: 100%; }
   #approach-page-content #section-process .process-list .process-item span {
     display: none; } }
+
+@media only screen and (max-height: 600px) {
+  header {
+    height: auto; }
+    header .heading {
+      margin: 8rem 0; } }

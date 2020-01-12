@@ -22,6 +22,7 @@ $color-yellow: #FFB700;
 
 html {
     box-sizing: border-box;
+    -webkit-text-size-adjust: 100%; // PREVENT FONT SCALING IN LANDSCAPE
 }
 
 // REUSABLE ELEMENTS
@@ -131,6 +132,18 @@ a:link,
 a:visited {
     font-size: .8rem;
     text-decoration: none;
+}
+
+// REMOVE IOS DEFAULT BUTTON / FORM STYLING
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+    -webkit-appearance: none;
+    border-radius: 0;
 }
 
 // BUTTON
@@ -319,6 +332,7 @@ a:visited {
 .wpcf7-form {
     text-align: left;
     border: 1px solid #CCCCCC;
+    background-color: #fff;
     border-radius: 5px;
     padding: 5rem;
 
@@ -348,6 +362,7 @@ a:visited {
                     & .wpcf7-form-control {
                         width: 100%;
                         font-size: .8rem;
+                        background-color: #FAFAFA;
                         border: 1px solid #D9D9D9;
                         border-radius: 5px;
                         padding: .8rem;
@@ -555,10 +570,9 @@ header {
         }
     }
 
-    & #section-what, & #section-result, & #section-services {
-        padding-bottom: 0;
+    & #section-what, & #section-result, & #section-how {
 
-        & div {
+        & > div {
             &:first-child {
                 margin-right: 2rem;
             }
@@ -569,6 +583,7 @@ header {
 
             &.image-container {
                 align-self: flex-end;
+                margin-bottom: -5rem;
             }
         }
     }
@@ -738,7 +753,7 @@ header {
             }
         }
 
-        & #section-what, & #section-result, & #section-services {
+        & #section-what, & #section-result, & #section-how {
             & div {
                 &:first-child, &:last-child {
                     margin: 0;
@@ -746,6 +761,7 @@ header {
     
                 &.image-container {
                     margin: 0;
+                    margin-bottom: -5rem;
                     width: 70%;
 
                     order: 2;
@@ -799,13 +815,17 @@ header {
         padding: 0 2.5rem;
     }
 
-    #nav {
-        .menu-header-container {
-            display: none;
-        }
+    header {
+        background-attachment: scroll;
 
-        .btn-expand {
-            display: block;
+        & #nav {
+            .menu-header-container {
+                display: none;
+            }
+    
+            .btn-expand {
+                display: block;
+            }
         }
     }
 
@@ -855,6 +875,10 @@ header {
 
     header {
         background-attachment: fixed;
+
+        & .heading {
+            margin-top: 10rem;
+        }
     }
 
     #front-page-content {
@@ -867,7 +891,7 @@ header {
                 }
             }
 
-            &#section-what, &#section-result, &#section-services {
+            &#section-what, &#section-result, &#section-how {
                 & div {
                     &.image-container {
                         width: 100%;
@@ -886,6 +910,16 @@ header {
                     }
                 }
             }
+        }
+    }
+}
+
+@media only screen and (max-height: 600px) {
+    header {
+        height: auto;
+
+        .heading {
+            margin: 8rem 0;
         }
     }
 }
