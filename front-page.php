@@ -22,15 +22,19 @@
             <div>
                 <h2>We Improve Any Digital Product</h2>
                 <p>Whether you have a corporate website, intranet, e-commerce platform or piece of software.</p>
+                <div>
+                    <h3>How we do it?</h3>
+                    <p>We look at the most important improvements and start there. This can mean <span class="highlight">usability engineering</span>, improving the <span class="highlight">information architecture</span>, <span class="highlight">graphic design</span>, <span class="highlight">interaction design</span class="highlight">, and more. We always use analytics to give you tangible results.</p>
+            </div>
             </div>
             <div class="image-container">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/people-team.svg">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/people-build.svg">
             </div>
         </section>
 
         <section id="section-result">
             <div class="image-container">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/people-build.svg">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/people-team.svg">
             </div>
             <div>
                 <h2>The Size Of Your Company Doesn't Matter</h2>
@@ -39,18 +43,11 @@
             </div>
         </section>
 
-        <section id="section-how" class="align-center">
+        <section id="section-how">
             <div>
                 <h2>How Do We Get Results</h2>
                 <p>It is about understanding your users better than they understand themselves.</p>
                 <p>Tweaking your interface and products so your customers will keep coming back for more.</p>
-            </div>
-        </section>
-
-        <section id="section-services">
-            <div>
-                <h2>What We Can Do For You</h2>
-                <p>We look at the most important improvements and start there. This can mean <span class="highlight">usability engineering</span>, improving the <span class="highlight">information architecture</span>, <span class="highlight">graphic design</span>, <span class="highlight">interaction design</span class="highlight">, and more. We always use analytics to give you tangible results.</p>
                 <a href="/approach" class="btn btn-outline">Learn More</a>
             </div>
             <div class="image-container">
@@ -60,7 +57,8 @@
 
         <section id="section-contact" class="align-center">
             <div>
-                <h2>Contact Us Now</h2>
+                <h2>Curious About What We Can Do For You?</h2>
+                <p>Simply drop us a message to find out!</p>
                 <div class="contact-form">
                     <?php echo do_shortcode('[contact-form-7 id="27" title="Contact Form"]'); ?>
                 </div>
